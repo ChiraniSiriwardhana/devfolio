@@ -29,8 +29,11 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full font-sans bg-[#0c0c0c] text-neutral-300 selection:bg-neutral-800 selection:text-white">
-       
+      {/* Added suppressHydrationWarning here */}
+      <body
+        suppressHydrationWarning
+        className="min-h-full font-sans bg-[#0c0c0c] text-neutral-300 selection:bg-neutral-800 selection:text-white"
+      >
         <div className="max-w-2xl px-6 py-12 md:py-20 mx-auto md:mx-0 md:ml-64 lg:ml-72">
           {children}
         </div>
